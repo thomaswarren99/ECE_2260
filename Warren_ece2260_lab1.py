@@ -41,14 +41,14 @@ def left_riemann(delta_x, lb, ub):
         su += a
     return su
 
-# def right_riemann(delta_x, lb, ub):
-#     d = int(ub/delta_x)
-#     su = 0
-#     for i in range(lb, d):
-#         inc = delta_x * (i + 1)
-#         a = f_x(inc) * delta_x
-#         su += a
-#     return a
+def right_riemann(delta_x, lb, ub):
+    d = int(ub/delta_x)
+    su = 0
+    for i in range(lb, d):
+        inc = delta_x * (i + 1)
+        a = f_x(inc) * delta_x
+        su += a
+    return su
 
     
 
@@ -123,10 +123,10 @@ def main():
         summation = left_riemann(delta_x, lb, ub)
         print("\tdelta_x=%f, summation=%f" % (delta_x, summation))
 
-    # print("calculating right Riemann sum")
-    # for delta_x in [1, 0.1, 0.01, 0.0001]:
-    #     summation = right_riemann(delta_x, lb, ub)
-    #     print("\tdelta_x=%f, summation=%f" % (delta_x, summation))
+    print("calculating right Riemann sum")
+    for delta_x in [1, 0.1, 0.01, 0.0001]:
+        summation = right_riemann(delta_x, lb, ub)
+        print("\tdelta_x=%f, summation=%f" % (delta_x, summation))
 
     # print("calculating midpoint Riemann sum")
     # for delta_x in [1, 0.1, 0.01, 0.0001]:
