@@ -1,3 +1,11 @@
+##
+## Thomas Warren, 2020
+## thomaswarren_lab1
+## File description: Quadratic formula, factorials, and riemann sums
+## functions_ece2260
+##
+
+
 import cmath
 import math
 
@@ -73,6 +81,7 @@ def midpoint_riemann(delta_x, lb, ub):
 
 # function finds the riemann sum by using the trapezoid method with 
 # inputs delta_x, lb, ub    
+
 def trap_riemann(delta_x, lb, ub):
     d = int(ub/delta_x)
     su = 0
